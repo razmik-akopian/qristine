@@ -7,6 +7,8 @@ import './Main.css';
 const Main = () => {
   const [showPostCard, setShowPostCard] = useState(false);
 
+  console.log('Main render');
+
   return (
     <div className="main">
       <Button onClick={() => setShowPostCard(true)} size="xl" color="pink">
