@@ -10,4 +10,7 @@ export default defineConfig({
     setupFiles: './vitest.setup.mjs',
   },
   base: '/qristine',
+  build: {
+    sourcemap: false,
+  },
 });
