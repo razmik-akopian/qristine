@@ -1,13 +1,17 @@
 import '@mantine/core/styles.css';
+import './App.css';
 
-import { MantineProvider } from '@mantine/core';
-import { Router } from './Router';
-import { theme } from './theme';
+import { createTheme, MantineProvider } from '@mantine/core';
+import { Main } from './components/Main/Main';
 
-export default function App() {
+const theme = createTheme({});
+
+const App = () => {
   return (
     <MantineProvider theme={theme}>
-      <Router />
+      <Main />
     </MantineProvider>
   );
-}
+};
+
+export { App };
