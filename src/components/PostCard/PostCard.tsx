@@ -1,19 +1,21 @@
-import { Image } from '@mantine/core';
+import { Image, Text } from '@mantine/core';
+import { MAIN_TEXT, TLanguage } from '@/constants';
+import { Footer } from '../Footer';
+import { ImageWrapper } from '../ImageWrapper';
 
 import './PostCard.css';
 
-const PostCard = () => {
+const PostCard = ({ language }: { language: TLanguage }) => {
   return (
     <div className="postCard">
-      <Image
-        src="/src/assets/post-card.jpg"
-        alt="С днем рождения!"
-        width={500}
-        height={500}
-        fit="cover"
-        radius="md"
-      />
-      <p>Post Content</p>
+      <ImageWrapper>
+        <Image src="/src/assets/post-card.jpg" alt="С днем рождения!" />
+      </ImageWrapper>
+      <Text size="lg" className="text">
+        {MAIN_TEXT[language]}
+      </Text>
+
+      <Footer language={language} />
     </div>
   );
 };

@@ -1,10 +1,13 @@
+import { createTheme, MantineProvider } from '@mantine/core';
+import { Main } from './components/Main/';
+
 import '@mantine/core/styles.css';
 import './App.css';
 
-import { createTheme, MantineProvider } from '@mantine/core';
-import { Main } from './components/Main/Main';
-
-const theme = createTheme({});
+const theme = createTheme({
+  fontFamily: 'Manrope, sans-serif',
+  headings: { fontFamily: 'Manrope, sans-serif' },
+});
 
 const App = () => {
   return (

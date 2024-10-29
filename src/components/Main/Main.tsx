@@ -1,20 +1,33 @@
 import { useState } from 'react';
-import { Button } from '@mantine/core';
-import { PostCard } from '../PostCard/PostCard';
+import { Button, Switch } from '@mantine/core';
+import { BUTTON_TEXT, SWITCH_LABELS, TLanguage } from '@/constants';
+import { PostCard } from '../PostCard';
 
 import './Main.css';
 
 const Main = () => {
   const [showPostCard, setShowPostCard] = useState(false);
-
-  console.log('Main render');
+  const [language, setLanguage] = useState<TLanguage>('RUS');
 
   return (
     <div className="main">
-      <Button onClick={() => setShowPostCard(true)} size="xl" color="pink">
-        Нажми на меня!
+      <Switch
+        size="lg"
+        onLabel={SWITCH_LABELS['ARM']}
+        offLabel={SWITCH_LABELS['RUS']}
+        color="pink"
+        className="switcher"
+        onChange={() => setLanguage((prev) => (prev === 'ARM' ? 'RUS' : 'ARM'))}
+      />
+      <Button
+        onClick={() => setShowPostCard((prev) => !prev)}
+        size="xl"
+        color="pink"
+        className="button"
+      >
+        {BUTTON_TEXT[language]}
       </Button>
-      {showPostCard && <PostCard />}
+      {showPostCard && <PostCard language={language} />}
     </div>
   );
 };
