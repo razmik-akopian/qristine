@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Button, Image, Text } from '@mantine/core';
+import footerGif from '../../../public/God.gif';
 import { ImageWrapper } from '../ImageWrapper';
 
 import './Footer.css';
@@ -22,7 +23,7 @@ const Footer = ({ language }: { language: TLanguage }) => {
       {showImage && (
         <div>
           <ImageWrapper>
-            <Image src="/God.gif" alt="С днем рождения!" className="footer" />
+            <Image src={footerGif} alt="С днем рождения!" className="footer" />
           </ImageWrapper>
           <Text size="lg" className="text">
             {FOOTER_TEXT[language]}

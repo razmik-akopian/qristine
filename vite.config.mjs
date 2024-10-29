@@ -9,5 +9,5 @@ export default defineConfig({
     environment: 'jsdom',
     setupFiles: './vitest.setup.mjs',
   },
-  // base: '/qristine/',
+  base: '/qristine',
 });
