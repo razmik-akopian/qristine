@@ -9,7 +9,7 @@ const PostCard = ({ language }: { language: TLanguage }) => {
   return (
     <div className="postCard">
       <ImageWrapper>
-        <Image src="/src/assets/post-card.jpg" alt="С днем рождения!" />
+        <Image src="/post-card.jpg" alt="С днем рождения!" />
       </ImageWrapper>
       <Text size="lg" className="text">
         {MAIN_TEXT[language]}

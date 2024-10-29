@@ -22,7 +22,7 @@ const Footer = ({ language }: { language: TLanguage }) => {
       {showImage && (
         <div>
           <ImageWrapper>
-            <Image src="/src/assets/God.gif" alt="С днем рождения!" className="footer" />
+            <Image src="/God.gif" alt="С днем рождения!" className="footer" />
           </ImageWrapper>
           <Text size="lg" className="text">
             {FOOTER_TEXT[language]}
